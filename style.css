@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 30px 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.15); /* brilho suave */
+  background-color: transparent;
+  backdrop-filter: blur(2px); /* leve efeito de vidro */
+}
+
+
+h1 {
+  font-family: 'BBH Sans Bartle', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: white;
+  transition: all 0.4s ease;
+  display: inline-block;
+}
+
+/* efeito hover com neon branco */
+h1:hover {
+  transform: scale(1.1);
+}
+
+/* --- Ícone do Instagram --- */
+.social-link svg {
+  fill: white;
+  transition: all 0.4s ease;
+  filter: drop-shadow(0 0 0 transparent);
+}
+
+.social-link:hover svg {
+   transform: scale(1.1);
+  fill: url(#instagram-gradient);
+  filter: drop-shadow(0 0 8px rgba(221, 42, 123, 0.7));
+}
+.center-section {
+  position: absolute;
+  top: 50%;
+  right: 50px; /* distância da borda direita */
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.profile-frame {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  animation: float 3s ease-in-out infinite;
+}
+
+.profile-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
